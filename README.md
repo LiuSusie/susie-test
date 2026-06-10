@@ -1,0 +1,1 @@
+本项目包含 **API 接口自动化测试** 与 **UI 自动化测试**，基于 Python + pytest 实现，支持 Excel 数据驱动和 Allure 可视化报告。
