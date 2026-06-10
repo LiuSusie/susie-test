@@ -1,6 +1,6 @@
-# OpenCSG 自动化测试项目
+# 自动化测试项目
 
-这是基于 OpenCSG 相关项目的自动化测试工程，包含 API 接口自动化测试与 UI 端自动化测试两部分，采用 Python + Pytest 技术栈实现，可直接运行并生成 Allure 测试报告。
+自动化测试工程包含 API 接口自动化测试与 UI 端自动化测试两部分，采用 Python + Pytest 技术栈实现，可直接运行并生成 Allure 测试报告。
 
 ---
 ## 项目结构
@@ -70,8 +70,9 @@ pip install -r requirements.txt
 pip install pytest requests selenium allure-pytest openpyxl jsonpath-python
 
 
-运行测试
-1. API 自动化测试
+4.运行测试
+
+1). API 自动化测试
 
 #### 运行 API 测试用例，生成 Allure 结果
 pytest test_api.py --alluredir=reports/allure-api-result
@@ -79,7 +80,7 @@ pytest test_api.py --alluredir=reports/allure-api-result
 #### 生成并打开 HTML 报告
 allure serve reports/allure-api-result
 
-2. UI 自动化测试
+2). UI 自动化测试
 #### 运行 UI 测试用例，生成 Allure 结果
 pytest test_ui.py --alluredir=reports/allure-ui-result
 
