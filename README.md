@@ -58,6 +58,7 @@ csg-automation-test/
     git clone https://github.com/你的用户名/你的仓库名.git
     cd csg-automation-test
 2.创建并激活虚拟环境
+
 python -m venv .venv
 
 .\.venv\Scripts\activate
@@ -65,24 +66,24 @@ python -m venv .venv
 3.安装依赖
 
 pip install -r requirements.txt
-# 核心依赖（若没有 requirements.txt，可手动安装）
+#### 核心依赖（若没有 requirements.txt，可手动安装）
 pip install pytest requests selenium allure-pytest openpyxl jsonpath-python
 
 
 运行测试
 1. API 自动化测试
 
-# 运行 API 测试用例，生成 Allure 结果
+#### 运行 API 测试用例，生成 Allure 结果
 pytest test_api.py --alluredir=reports/allure-api-result
 
-# 生成并打开 HTML 报告
+#### 生成并打开 HTML 报告
 allure serve reports/allure-api-result
 
 2. UI 自动化测试
-# 运行 UI 测试用例，生成 Allure 结果
+#### 运行 UI 测试用例，生成 Allure 结果
 pytest test_ui.py --alluredir=reports/allure-ui-result
 
-# 生成并打开 HTML 报告
+#### 生成并打开 HTML 报告
 allure serve reports/allure-ui-result
 
 ## 测试用例说明
