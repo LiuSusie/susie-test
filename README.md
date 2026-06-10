@@ -77,6 +77,7 @@ pytest test_api.py --alluredir=reports/allure-api-result
 
 # 生成并打开 HTML 报告
 allure serve reports/allure-api-result
+
 2. UI 自动化测试
 # 运行 UI 测试用例，生成 Allure 结果
 pytest test_ui.py --alluredir=reports/allure-ui-result
@@ -84,13 +85,16 @@ pytest test_ui.py --alluredir=reports/allure-ui-result
 # 生成并打开 HTML 报告
 allure serve reports/allure-ui-result
 
-测试用例说明
-API 自动化测试
-用例管理：通过 api_test_cases.xls 实现数据驱动，支持用例批量维护
-断言方式：状态码校验、响应体结构校验、关键字段断言
-UI 自动化测试
-元素操作：封装了常用的元素定位、等待、点击、输入等方法
-用例管理：通过 ui_test_cases.xlsx 维护测试步骤与预期结果
-扩展说明
-项目已预留扩展接口，可直接新增用例到 Excel 中，无需修改核心代码
-报告中会记录每个用例的执行结果、耗时与错误详情，便于定位问题
+## 测试用例说明
+
+### API 自动化测试
+- **用例管理**：通过 `api_test_cases.xls` 实现数据驱动，支持用例批量维护
+- **断言方式**：状态码校验、响应体结构校验、关键字段断言
+
+### UI 自动化测试
+- **元素操作**：封装了常用的元素定位、等待、点击、输入等方法
+- **用例管理**：通过 `ui_test_cases.xlsx` 维护测试步骤与预期结果
+
+### 扩展说明
+- 项目已预留扩展接口，可直接新增用例到 Excel 中，无需修改核心代码
+- 报告中会记录每个用例的执行结果、耗时与错误详情，便于定位问题
