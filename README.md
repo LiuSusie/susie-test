@@ -3,34 +3,42 @@
 这是基于 OpenCSG 相关项目的自动化测试工程，包含 API 接口自动化测试与 UI 端自动化测试两部分，采用 Python + Pytest 技术栈实现，可直接运行并生成 Allure 测试报告。
 
 ---
-
 ## 项目结构
+```
 csg-automation-test/
-├── .venv/ # Python 虚拟环境
+├── .venv/ # Python 虚拟环境（依赖隔离）
 ├── commons/ # 公共工具模块
 │ ├── init.py
-│ ├── excelOpration.py # Excel 测试用例读取 / 操作工具
-│ └── oprationElement.py # UI 元素操作封装工具
+│ ├── excelOpration.py # Excel 测试用例读取 / 写入工具
+│ └── oprationElement.py # UI 元素操作封装（定位、等待、点击等）
 ├── driver/
-│ └── chromedriver.exe # Chrome 浏览器驱动
-├── reports/ # 测试报告目录
-│ ├── allure-api-report/ # API 测试报告生成目录
-│ ├── allure-api-result/ # API 测试结果数据
-│ ├── allure-ui-report/ # UI 测试报告生成目录
-│ ├── allure-ui-result/ # UI 测试结果数据
-│ ├── results.xml # JUnit 格式测试结果
-│ └── test.log # 运行日志
-├── testdata/ # 测试数据目录
+│ └── chromedriver.exe # Chrome 浏览器驱动（与本地浏览器版本匹配）
+├── reports/ # 测试报告与日志目录
+│ ├── allure-api-report/ # API 测试 HTML 报告生成目录
+│ ├── allure-api-result/ # API 测试结果数据（供 Allure 解析）
+│ ├── allure-ui-report/ # UI 测试 HTML 报告生成目录
+│ ├── allure-ui-result/ # UI 测试结果数据（供 Allure 解析）
+│ ├── results.xml # JUnit 格式测试结果文件
+│ └── test.log # 测试运行日志
+├── testdata/ # 测试数据与配置目录
 │ ├── init.py
-│ ├── global_value.py # 全局变量 / 配置管理
-│ ├── api_test_cases.xls # API 接口测试用例 Excel
-│ └── ui_test_cases.xlsx # UI 场景测试用例 Excel
-├── pytest.ini # Pytest 配置文件
-├── README.md # 项目说明文档
+│ ├── global_value.py # 全局变量 / 服务地址配置
+│ ├── api_test_cases.xls # API 接口测试用例（数据驱动）
+│ └── ui_test_cases.xlsx # UI 场景测试用例（数据驱动）
+├── pytest.ini # Pytest 全局配置文件
+├── README.md # 项目说明文档（当前文件）
 ├── test_api.py # API 自动化测试用例集
 └── test_ui.py # UI 自动化测试用例集
+```
+## 模块说明
 
-
+| 模块/文件 | 核心作用 |
+| :--- | :--- |
+| `commons/` | 封装通用工具，如 Excel 操作、UI 元素操作，实现用例与工具解耦 |
+| `test_api.py` | 接口自动化用例集，基于 `requests` 实现，支持参数化与数据驱动 |
+| `test_ui.py` | UI 自动化用例集，基于 `Selenium` 实现，覆盖页面交互与校验 |
+| `reports/` | 存储测试报告与日志，支持 `Allure` 可视化报告生成 |
+| `testdata/` | 维护测试用例与全局配置，便于批量修改与扩展 |
 ---
 
 ## 技术栈
