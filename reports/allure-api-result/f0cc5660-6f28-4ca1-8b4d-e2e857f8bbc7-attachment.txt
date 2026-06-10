@@ -1,0 +1,2 @@
+DEBUG    urllib3.connectionpool:connectionpool.py:243 Starting new HTTP connection (1): localhost:11435
+DEBUG    urllib3.connectionpool:connectionpool.py:546 http://localhost:11435 "POST /api/chat HTTP/11" 500 128

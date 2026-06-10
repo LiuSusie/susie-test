@@ -1,0 +1,4 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Wed Jun 10 12:25:20 CST 2026","Wed Jun 10 12:25:20 CST 2026","10","","test_api","TestApiCases","","","test_excel_case_[case_dict0]",""
+"failed","Wed Jun 10 12:25:20 CST 2026","Wed Jun 10 12:25:20 CST 2026","62","","test_api","TestApiCases","","","test_excel_case_[case_dict2]",""
+"passed","Wed Jun 10 12:25:20 CST 2026","Wed Jun 10 12:25:20 CST 2026","239","","test_api","TestApiCases","","","test_excel_case_[case_dict1]",""

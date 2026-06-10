@@ -1,0 +1,6 @@
+DEBUG    urllib3.connectionpool:connectionpool.py:243 Starting new HTTP connection (1): localhost:11435
+DEBUG    urllib3.connectionpool:connectionpool.py:546 http://localhost:11435 "GET /api/health HTTP/11" 200 16
+DEBUG    urllib3.connectionpool:connectionpool.py:243 Starting new HTTP connection (1): localhost:11435
+DEBUG    urllib3.connectionpool:connectionpool.py:546 http://localhost:11435 "GET /api/tags HTTP/11" 200 None
+DEBUG    urllib3.connectionpool:connectionpool.py:243 Starting new HTTP connection (1): localhost:11435
+DEBUG    urllib3.connectionpool:connectionpool.py:546 http://localhost:11435 "POST /api/chat HTTP/11" 500 128
